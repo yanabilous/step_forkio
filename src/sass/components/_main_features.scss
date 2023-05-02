@@ -1,0 +1,162 @@
+.bg_grey {
+  background: #F4F4F4;
+}
+
+.main_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0 33px 0;
+
+}
+
+.main_container_flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.main_container__flex_left_column {
+  display: flex;
+  flex-direction: column;
+
+  .visible-sm {
+    display: none;
+  }
+}
+
+.flex_left_column_img_text {
+  display: flex;
+  justify-content: space-around;
+  padding: 34px 50px 0 90px;
+
+  .img_size {
+    width: 112px;
+    padding-right: 20px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.text {
+
+  h5 {
+    color: #323232;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  p {
+    color: #848E97;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.main_container__flex_right_column {
+  display: flex;
+  flex-direction: column;
+
+  .visible-lg {
+    padding: 20px 0 20px 0;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+    color: #8D81AC;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .bg_grey {
+    background: none;
+  }
+  .main_container__flex_left_column {
+    .visible-sm {
+      display: block;
+    }
+  }
+  .main_container__flex_right_column {
+    .visible-lg {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .main_container_flex {
+    display: block;
+  }
+  .main_container__flex_left_column {
+    display: flex;
+    flex-direction: column;
+
+    .visible-sm {
+      padding: 20px 0 20px 0;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 48px;
+      text-align: center;
+      line-height: 50px;
+      color: #8D81AC;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .main_container__flex_left_column {
+    display: flex;
+    flex-direction: column;
+     padding: 0 26px;
+
+    .visible-sm {
+      display: block;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+  .main_container_flex {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+  .flex_left_column_img_text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex_left_column_img_text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+
+    .img_size {
+      width: 112px;
+
+    }
+
+    img {
+      max-width: 100%;
+      padding-bottom: 20px;
+    }
+  }
+  .text{
+    h5{
+      padding: 26px 14px;
+    }
+    p{
+      padding:  0 0 36px 0 ;
+    }
+  }
+
+}
